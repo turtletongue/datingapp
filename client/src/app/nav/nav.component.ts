@@ -24,14 +24,10 @@ export class NavComponent implements OnInit {
       () => {
         this.router.navigateByUrl('/members');
       },
-      (error) => {
-        error.error.errors
-          ? Object.values(error.error.errors).forEach((errorArr: string[]) =>
-              errorArr.forEach((errorMessage: string) => {
-                this.toastr.error(errorMessage);
-              })
-            )
-          : this.toastr.error(error.error);
+      (errors) => {
+        errors.forEach((errorMessage: string) =>
+          this.toastr.error(errorMessage)
+        );
       }
     );
   }
