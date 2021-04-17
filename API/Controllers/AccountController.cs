@@ -6,7 +6,7 @@ using API.Entities;
 using Microsoft.AspNetCore.Mvc;
 using API.DTOs;
 using Microsoft.EntityFrameworkCore;
-using API.interfaces;
+using API.Interfaces;
 
 namespace API.Controllers
 {

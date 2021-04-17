@@ -1,5 +1,5 @@
 using API.Entities;
-using API.interfaces;
+using API.Interfaces;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using System;
