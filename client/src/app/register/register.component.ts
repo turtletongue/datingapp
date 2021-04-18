@@ -24,14 +24,10 @@ export class RegisterComponent implements OnInit {
         console.log(response);
         this.cancel();
       },
-      (error) => {
-        error.error.errors
-          ? Object.values(error.error.errors).forEach((errorArr: string[]) =>
-              errorArr.forEach((errorMessage: string) => {
-                this.toastr.error(errorMessage);
-              })
-            )
-          : this.toastr.error(error.error);
+      (errors) => {
+        errors.forEach((errorMessage: string) =>
+          this.toastr.error(errorMessage)
+        );
       }
     );
   }
